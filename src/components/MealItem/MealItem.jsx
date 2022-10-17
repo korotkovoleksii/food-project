@@ -1,26 +1,26 @@
 import { Link } from "react-router-dom";
-import "./CategoryItem.css";
+import "./MealItem.css";
 
-const CategoryItem = ({ id, title, imgUrl, description }) => {
+const MealItem = ({ strMeal, strMealThumb, idMeal }) => {
     return (
         <div className="card">
             <div className="card-image">
-                <img src={imgUrl} alt={title} />
+                <img src={strMealThumb} alt={strMeal} />
             </div>
 
             <div className="card-content">
-                <span className="card-title">{title}</span>
-                <p>{description.slice(0, 60)}...</p>
+                <span className="card-title">{strMeal}</span>
             </div>
             <div className="card-action">
                 <Link
-                    to={`/category/${title}`}
+                    to={`/meal/${idMeal}`}
                     className="waves-effect waves-light btn"
                 >
-                    watch category
+                    watch script
                 </Link>
             </div>
         </div>
     );
 };
-export default CategoryItem;
+
+export default MealItem;

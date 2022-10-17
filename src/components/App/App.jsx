@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "../../pages/Home";
 import About from "../../pages/About";
+import Meals from "../../pages/Meals";
 import Contact from "../../pages/Contact";
 import NotFound from "../../pages/NotFound";
 
@@ -15,6 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" exact element={<Home />}></Route>
                     <Route path="/about" element={<About />}></Route>
+                    <Route path="/category/:name" element={<Meals />}></Route>
                     <Route path="/contact" element={<Contact />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
