@@ -7,6 +7,7 @@ import About from "../../pages/About";
 import Meals from "../../pages/Meals";
 import Contact from "../../pages/Contact";
 import NotFound from "../../pages/NotFound";
+import Recipe from "../../pages/Recipe";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/" exact element={<Home />}></Route>
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/category/:name" element={<Meals />}></Route>
+                    <Route path="/meal/:id" element={<Recipe />}></Route>
                     <Route path="/contact" element={<Contact />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
